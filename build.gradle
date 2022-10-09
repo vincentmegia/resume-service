@@ -32,3 +32,15 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+tasks {
+    bootJar {
+        launchScript()
+    }
+}
+
+tasks {
+    bootJar {
+        launchScript()
+    }
+}
