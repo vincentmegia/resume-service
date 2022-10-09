@@ -1,1 +1,1 @@
-web: ./gradlew bootRun
+web: ./gradlew bootRun $JAVA_OPTS -Dserver.port=$PORT
