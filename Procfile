@@ -1,1 +1,1 @@
-web: ./gradlew bootRun $JAVA_OPTS -Dserver.port=$PORT
+web: java $JAVA_OPTS -jar build/libs/resume-service-1.0-SNAPSHOT.jar -Dserver.port=$PORT $JAR_OPTS

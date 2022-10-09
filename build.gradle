@@ -38,9 +38,3 @@ tasks {
         launchScript()
     }
 }
-
-tasks {
-    bootJar {
-        launchScript()
-    }
-}
