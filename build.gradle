@@ -1,40 +1,26 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '2.7.4'
-    id 'io.spring.dependency-management' version '1.0.14.RELEASE'
-
+    id 'groovy'
+    id 'org.springframework.boot' version '3.0.0'
 }
 
-group 'com.stupendousware'
-version '1.0-SNAPSHOT'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.stupendousware.resume-service'
+version '1.0.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    implementation 'org.springframework.boot:spring-boot-starter'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation 'org.springframework.boot:spring-boot-starter-cache:2.7.4'
-    implementation 'org.springframework.boot:spring-boot-starter-test:2.7.4'
-    compileOnly 'org.projectlombok:lombok:1.18.24'
-    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'org.codehaus.groovy:groovy:3.0.13'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    testCompileOnly 'org.projectlombok:lombok:1.18.24'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
-    // https://mavenlibs.com/maven/dependency/com.h2database/h2
-    implementation 'com.h2database:h2:2.1.214'
-    implementation 'org.junit.vintage:junit-vintage-engine'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
 }
 
 test {
     useJUnitPlatform()
-}
-
-tasks {
-    bootJar {
-        launchScript()
-    }
 }
