@@ -1,6 +1,7 @@
 FROM openjdk:17-jdk-slim-buster
-MAINTAINER vincentmegia.com
+WORKDIR /app
+COPY app/build/lib/* build/lib/
+COPY app/build/libs/resume-service-1.0.0-SNAPSHOT.jar build/
 
-COPY build/libs/resume-service-1.0.0-SNAPSHOT.jar.jar resume-service-1.0.0-SNAPSHOT.jar
+WORKDIR /app/build
 ENTRYPOINT ["java","-jar","/resume-service-1.0.0-SNAPSHOT.jar"]
-
