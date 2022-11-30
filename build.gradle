@@ -8,6 +8,11 @@ apply plugin: 'io.spring.dependency-management'
 group 'com.stupendousware.resume-service'
 version '1.0.0-SNAPSHOT'
 
+java {
+    sourceCompatibility = "17"
+    targetCompatibility = "17"
+}
+
 repositories {
     mavenCentral()
 }
